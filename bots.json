@@ -3,97 +3,510 @@
   {
     "id": "dyno",
     "name": "Dyno",
-    "description": "Herramientas de moderación, automatización y administración para servidores.",
+    "description": "Moderación, automoderación, registros y comandos personalizados.",
     "category": "Moderación",
     "website": "https://dyno.gg/",
-    "tags": ["moderación", "logs", "automación"]
+    "logo": "https://www.google.com/s2/favicons?domain=dyno.gg&sz=128",
+    "invite": "https://discord.com/oauth2/authorize?client_id=161660517914509312&scope=bot%20identify%20guilds%20applications.commands&response_type=code&redirect_uri=https://dyno.gg/return&permissions=1513962695871",
+    "tags": ["Moderación", "Automod", "Logs"]
   },
   {
     "id": "mee6",
     "name": "MEE6",
-    "description": "Bot multifunción con herramientas de moderación, niveles y automatizaciones.",
-    "category": "Multifunción",
+    "description": "Bot multifunción con moderación, niveles y automatizaciones.",
+    "category": "Moderación",
     "website": "https://mee6.xyz/",
-    "tags": ["niveles", "moderación", "multifunción"]
+    "logo": "https://www.google.com/s2/favicons?domain=mee6.xyz&sz=128",
+    "invite": "https://discord.com/oauth2/authorize?client_id=159985415099514880&permissions=296150887519&redirect_uri=https%3A%2F%2Fmee6.xyz%2Fguild-oauth&response_type=code&scope=bot+applications.commands",
+    "tags": ["Moderación", "Niveles", "Automatización"]
   },
   {
-    "id": "carl-bot",
+    "id": "carlbot",
     "name": "Carl-bot",
-    "description": "Roles de reacción, moderación, registros y automatizaciones.",
+    "description": "Moderación, reaction roles, registros y automatización.",
     "category": "Moderación",
     "website": "https://carl.gg/",
-    "tags": ["roles", "moderación", "logs"]
+    "logo": "https://www.google.com/s2/favicons?domain=carl.gg&sz=128",
+    "invite": "https://discord.com/oauth2/authorize?client_id=235148962103951360&permissions=2088234238&scope=bot",
+    "tags": ["Moderación", "Roles", "Logs"]
   },
   {
     "id": "probot",
     "name": "ProBot",
-    "description": "Bienvenidas, moderación, niveles y herramientas para comunidades.",
-    "category": "Multifunción",
+    "description": "Herramientas de moderación, protección y bienvenida.",
+    "category": "Moderación",
     "website": "https://probot.io/",
-    "tags": ["bienvenidas", "niveles", "moderación"]
+    "logo": "https://www.google.com/s2/favicons?domain=probot.io&sz=128",
+    "invite": "https://discord.com/oauth2/authorize?client_id=282859044593598464&permissions=2080374975&redirect_uri=https%3A%2F%2Fapi.probot.io%2Fauthback&response_type=code&scope=identify+guilds+bot+applications.commands+applications.commands.permissions.update",
+    "tags": ["Moderación", "Protección", "Automod"]
   },
   {
     "id": "yagpdb",
     "name": "YAGPDB",
-    "description": "Herramientas configurables de moderación, roles y automatización.",
-    "category": "Automatización",
+    "description": "Automoderación avanzada, comandos y herramientas de servidor.",
+    "category": "Moderación",
     "website": "https://yagpdb.xyz/",
-    "tags": ["automatización", "roles", "moderación"]
+    "logo": "https://www.google.com/s2/favicons?domain=yagpdb.xyz&sz=128",
+    "invite": "https://discord.com/oauth2/authorize?client_id=204255083083333633&permissions=2146827775&scope=applications.commands+bot",
+    "tags": ["Moderación", "Comandos", "Automod"]
+  },
+
+  {
+    "id": "wick",
+    "name": "Wick",
+    "description": "Protección de servidores, verificación y herramientas anti-raid.",
+    "category": "Seguridad",
+    "website": "https://wickbot.com/",
+    "logo": "https://www.google.com/s2/favicons?domain=wickbot.com&sz=128",
+    "invite": null,
+    "tags": ["Seguridad", "Anti-raid", "Protección"]
   },
   {
-    "id": "ticket-tool",
-    "name": "Ticket Tool",
-    "description": "Sistema de tickets de soporte para servidores de Discord.",
-    "category": "Tickets",
-    "website": "https://ticket-tool.xyz/",
-    "tags": ["tickets", "soporte"]
+    "id": "beemo",
+    "name": "Beemo",
+    "description": "Herramientas de protección contra actividad maliciosa.",
+    "category": "Seguridad",
+    "website": "https://beemo.gg/",
+    "logo": "https://www.google.com/s2/favicons?domain=beemo.gg&sz=128",
+    "invite": null,
+    "tags": ["Seguridad", "Anti-raid", "Protección"]
   },
   {
-    "id": "arcane",
-    "name": "Arcane",
-    "description": "Sistema de niveles y herramientas de comunidad.",
-    "category": "Niveles",
-    "website": "https://arcane.bot/",
-    "tags": ["niveles", "comunidad"]
+    "id": "double-counter",
+    "name": "Double Counter",
+    "description": "Verificación y detección de cuentas alternativas.",
+    "category": "Seguridad",
+    "website": "https://doublecounter.gg/",
+    "logo": "https://www.google.com/s2/favicons?domain=doublecounter.gg&sz=128",
+    "invite": null,
+    "tags": ["Verificación", "Seguridad", "Anti-alt"]
   },
   {
-    "id": "sapphire",
-    "name": "Sapphire",
-    "description": "Bot con herramientas de administración, moderación y personalización.",
-    "category": "Multifunción",
-    "website": "https://sapph.xyz/",
-    "tags": ["moderación", "utilidades"]
+    "id": "captcha-bot",
+    "name": "Captcha.bot",
+    "description": "Sistema de verificación para nuevos miembros.",
+    "category": "Seguridad",
+    "website": "https://captcha.bot/",
+    "logo": "https://www.google.com/s2/favicons?domain=captcha.bot&sz=128",
+    "invite": null,
+    "tags": ["Captcha", "Verificación", "Seguridad"]
   },
   {
-    "id": "nekotina",
-    "name": "Nekotina",
-    "description": "Bot multifunción para comunidades de Discord.",
-    "category": "Multifunción",
-    "website": "https://nekotina.com/",
-    "tags": ["multifunción", "comunidad"]
+    "id": "altdentifier",
+    "name": "AltDentifier",
+    "description": "Verificación de usuarios y herramientas de protección.",
+    "category": "Seguridad",
+    "website": "https://altdentifier.com/",
+    "logo": "https://www.google.com/s2/favicons?domain=altdentifier.com&sz=128",
+    "invite": null,
+    "tags": ["Verificación", "Seguridad", "Usuarios"]
   },
+
   {
-    "id": "jockie-music",
+    "id": "jockie",
     "name": "Jockie Music",
-    "description": "Bot de música para escuchar contenido en canales de voz.",
+    "description": "Bot musical con reproducción y controles para servidores.",
     "category": "Música",
     "website": "https://www.jockiemusic.com/",
-    "tags": ["música", "voz"]
+    "logo": "https://www.google.com/s2/favicons?domain=jockiemusic.com&sz=128",
+    "invite": null,
+    "tags": ["Música", "Audio", "Reproducción"]
   },
   {
     "id": "fredboat",
     "name": "FredBoat",
-    "description": "Bot de música con reproducción y controles para servidores.",
+    "description": "Bot de música con comandos de reproducción y cola.",
     "category": "Música",
     "website": "https://fredboat.com/",
-    "tags": ["música", "voz"]
+    "logo": "https://www.google.com/s2/favicons?domain=fredboat.com&sz=128",
+    "invite": null,
+    "tags": ["Música", "Cola", "Audio"]
   },
   {
-    "id": "dank-memer",
-    "name": "Dank Memer",
-    "description": "Bot de entretenimiento con juegos, economía y funciones sociales.",
+    "id": "rythm",
+    "name": "Rythm",
+    "description": "Bot musical para reproducir audio en canales de voz.",
+    "category": "Música",
+    "website": "https://rythmbot.co/",
+    "logo": "https://www.google.com/s2/favicons?domain=rythmbot.co&sz=128",
+    "invite": null,
+    "tags": ["Música", "Audio", "Comandos"]
+  },
+  {
+    "id": "flavibot",
+    "name": "FlaviBot",
+    "description": "Bot de música con controles y reproducción de audio.",
+    "category": "Música",
+    "website": "https://top.gg/search?q=FlaviBot",
+    "logo": "https://www.google.com/s2/favicons?domain=top.gg&sz=128",
+    "invite": null,
+    "tags": ["Música", "Audio", "Reproducción"]
+  },
+  {
+    "id": "pancake",
+    "name": "Pancake",
+    "description": "Bot multifunción con herramientas musicales y de comunidad.",
+    "category": "Música",
+    "website": "https://pancake.gg/",
+    "logo": "https://www.google.com/s2/favicons?domain=pancake.gg&sz=128",
+    "invite": null,
+    "tags": ["Música", "Comunidad", "Utilidad"]
+  },
+
+  {
+    "id": "ticket-tool",
+    "name": "Ticket Tool",
+    "description": "Sistema de tickets con paneles y canales privados.",
+    "category": "Tickets",
+    "website": "https://ticket-tool.xyz/",
+    "logo": "https://www.google.com/s2/favicons?domain=ticket-tool.xyz&sz=128",
+    "invite": "https://discord.com/oauth2/authorize?client_id=557628352828014614&permissions=2952915024&scope=applications.commands+bot",
+    "tags": ["Tickets", "Soporte", "Paneles"]
+  },
+  {
+    "id": "helper-gg",
+    "name": "Helper.gg",
+    "description": "Herramientas para organizar solicitudes de soporte.",
+    "category": "Tickets",
+    "website": "https://helper.gg/",
+    "logo": "https://www.google.com/s2/favicons?domain=helper.gg&sz=128",
+    "invite": null,
+    "tags": ["Tickets", "Soporte", "Atención"]
+  },
+  {
+    "id": "tickets",
+    "name": "Tickets",
+    "description": "Sistema de atención mediante tickets para comunidades.",
+    "category": "Tickets",
+    "website": "https://ticketsbot.net/",
+    "logo": "https://www.google.com/s2/favicons?domain=ticketsbot.net&sz=128",
+    "invite": null,
+    "tags": ["Tickets", "Soporte", "Comunidad"]
+  },
+  {
+    "id": "appy",
+    "name": "Appy",
+    "description": "Formularios y solicitudes para gestionar comunidades.",
+    "category": "Tickets",
+    "website": "https://appy.gg/",
+    "logo": "https://www.google.com/s2/favicons?domain=appy.gg&sz=128",
+    "invite": null,
+    "tags": ["Formularios", "Solicitudes", "Soporte"]
+  },
+  {
+    "id": "toscio",
+    "name": "Toscio",
+    "description": "Gestión de formularios, aplicaciones y solicitudes.",
+    "category": "Tickets",
+    "website": "https://toscio.com/",
+    "logo": "https://www.google.com/s2/favicons?domain=toscio.com&sz=128",
+    "invite": null,
+    "tags": ["Formularios", "Aplicaciones", "Soporte"]
+  },
+
+  {
+    "id": "arcane",
+    "name": "Arcane",
+    "description": "Sistema de experiencia, niveles y recompensas.",
+    "category": "Niveles",
+    "website": "https://arcane.bot/",
+    "logo": "https://www.google.com/s2/favicons?domain=arcane.bot&sz=128",
+    "invite": null,
+    "tags": ["Niveles", "XP", "Recompensas"]
+  },
+  {
+    "id": "amaribot",
+    "name": "AmariBot",
+    "description": "Sistema de niveles y clasificación de miembros.",
+    "category": "Niveles",
+    "website": "https://amaribot.com/",
+    "logo": "https://www.google.com/s2/favicons?domain=amaribot.com&sz=128",
+    "invite": null,
+    "tags": ["Niveles", "XP", "Ranking"]
+  },
+  {
+    "id": "tatsu",
+    "name": "Tatsu",
+    "description": "Experiencia, perfiles y participación de la comunidad.",
+    "category": "Niveles",
+    "website": "https://tatsu.gg/",
+    "logo": "https://www.google.com/s2/favicons?domain=tatsu.gg&sz=128",
+    "invite": null,
+    "tags": ["Niveles", "Perfiles", "Comunidad"]
+  },
+  {
+    "id": "maki",
+    "name": "Maki",
+    "description": "Niveles, roles automáticos y herramientas comunitarias.",
+    "category": "Niveles",
+    "website": "https://maki.gg/",
+    "logo": "https://www.google.com/s2/favicons?domain=maki.gg&sz=128",
+    "invite": null,
+    "tags": ["Niveles", "XP", "Roles"]
+  },
+  {
+    "id": "lurkr",
+    "name": "Lurkr",
+    "description": "Herramientas de participación y progresión de miembros.",
+    "category": "Niveles",
+    "website": "https://lurkr.gg/",
+    "logo": "https://www.google.com/s2/favicons?domain=lurkr.gg&sz=128",
+    "invite": null,
+    "tags": ["Niveles", "Comunidad", "XP"]
+  },
+
+  {
+    "id": "sesh",
+    "name": "Sesh",
+    "description": "Organización de eventos, horarios y calendarios.",
+    "category": "Eventos",
+    "website": "https://sesh.fyi/",
+    "logo": "https://www.google.com/s2/favicons?domain=sesh.fyi&sz=128",
+    "invite": null,
+    "tags": ["Eventos", "Calendario", "Horarios"]
+  },
+  {
+    "id": "apollo",
+    "name": "Apollo",
+    "description": "Gestión de eventos, inscripciones y recordatorios.",
+    "category": "Eventos",
+    "website": "https://apollo.fyi/",
+    "logo": "https://www.google.com/s2/favicons?domain=apollo.fyi&sz=128",
+    "invite": null,
+    "tags": ["Eventos", "Recordatorios", "Comunidad"]
+  },
+  {
+    "id": "raid-helper",
+    "name": "Raid-Helper",
+    "description": "Organización de eventos y listas de participantes.",
+    "category": "Eventos",
+    "website": "https://raid-helper.dev/",
+    "logo": "https://www.google.com/s2/favicons?domain=raid-helper.dev&sz=128",
+    "invite": null,
+    "tags": ["Eventos", "Participantes", "Organización"]
+  },
+  {
+    "id": "monitorss",
+    "name": "MonitoRSS",
+    "description": "Publica actualizaciones de fuentes RSS en Discord.",
+    "category": "Eventos",
+    "website": "https://monitorss.xyz/",
+    "logo": "https://www.google.com/s2/favicons?domain=monitorss.xyz&sz=128",
+    "invite": null,
+    "tags": ["RSS", "Notificaciones", "Automatización"]
+  },
+  {
+    "id": "streamcord",
+    "name": "Streamcord",
+    "description": "Notificaciones de transmisiones y actividad de creadores.",
+    "category": "Eventos",
+    "website": "https://streamcord.io/",
+    "logo": "https://www.google.com/s2/favicons?domain=streamcord.io&sz=128",
+    "invite": null,
+    "tags": ["Streaming", "Notificaciones", "Twitch"]
+  },
+
+  {
+    "id": "mudae",
+    "name": "Mudae",
+    "description": "Colección de personajes y juegos para comunidades.",
     "category": "Diversión",
-    "website": "https://dankmemer.lol/",
-    "tags": ["economía", "juegos", "diversión"]
+    "website": "https://mudae.bot/",
+    "logo": "https://www.google.com/s2/favicons?domain=mudae.bot&sz=128",
+    "invite": "https://discord.com/oauth2/authorize?client_id=432610292342587392&permissions=537159744&scope=applications.commands+bot",
+    "tags": ["Juegos", "Colección", "Personajes"]
+  },
+  {
+    "id": "nekotina",
+    "name": "Nekotina",
+    "description": "Bot en español con juegos y herramientas comunitarias.",
+    "category": "Diversión",
+    "website": "https://nekotina.com/",
+    "logo": "https://www.google.com/s2/favicons?domain=nekotina.com&sz=128",
+    "invite": "https://discord.com/oauth2/authorize?client_id=429457053791158281&permissions=1642824461566&scope=bot+applications.commands",
+    "tags": ["Diversión", "Español", "Comunidad"]
+  },
+  {
+    "id": "poketwo",
+    "name": "Pokétwo",
+    "description": "Juego de colección de Pokémon dentro de Discord.",
+    "category": "Diversión",
+    "website": "https://poketwo.net/",
+    "logo": "https://www.google.com/s2/favicons?domain=poketwo.net&sz=128",
+    "invite": null,
+    "tags": ["Pokémon", "Colección", "Juegos"]
+  },
+  {
+    "id": "karuta",
+    "name": "Karuta",
+    "description": "Juego de colección e intercambio de cartas.",
+    "category": "Diversión",
+    "website": "https://karuta.com/",
+    "logo": "https://www.google.com/s2/favicons?domain=karuta.com&sz=128",
+    "invite": null,
+    "tags": ["Cartas", "Colección", "Anime"]
+  },
+  {
+    "id": "loritta",
+    "name": "Loritta",
+    "description": "Bot comunitario con comandos y entretenimiento.",
+    "category": "Diversión",
+    "website": "https://loritta.website/",
+    "logo": "https://www.google.com/s2/favicons?domain=loritta.website&sz=128",
+    "invite": null,
+    "tags": ["Diversión", "Comunidad", "Comandos"]
+  },
+
+  {
+    "id": "serverstats",
+    "name": "ServerStats",
+    "description": "Muestra estadísticas y contadores del servidor.",
+    "category": "Utilidades",
+    "website": "https://serverstatsbot.com/",
+    "logo": "https://www.google.com/s2/favicons?domain=serverstatsbot.com&sz=128",
+    "invite": "https://discord.com/oauth2/authorize?client_id=458276816071950337&permissions=1100824&redirect_uri=https%3A%2F%2Fserverstatsbot.com%2Finvite&response_type=code&scope=bot+applications.commands",
+    "tags": ["Estadísticas", "Contadores", "Servidor"]
+  },
+  {
+    "id": "statbot",
+    "name": "Statbot",
+    "description": "Analíticas de actividad y crecimiento de comunidades.",
+    "category": "Utilidades",
+    "website": "https://statbot.net/",
+    "logo": "https://www.google.com/s2/favicons?domain=statbot.net&sz=128",
+    "invite": null,
+    "tags": ["Estadísticas", "Analíticas", "Actividad"]
+  },
+  {
+    "id": "xenon",
+    "name": "Xenon",
+    "description": "Herramientas de plantillas y copias de seguridad.",
+    "category": "Utilidades",
+    "website": "https://xenon.bot/",
+    "logo": "https://www.google.com/s2/favicons?domain=xenon.bot&sz=128",
+    "invite": null,
+    "tags": ["Backups", "Plantillas", "Servidor"]
+  },
+  {
+    "id": "invite-tracker",
+    "name": "Invite Tracker",
+    "description": "Seguimiento de invitaciones y crecimiento del servidor.",
+    "category": "Utilidades",
+    "website": "https://invite-tracker.com/",
+    "logo": "https://www.google.com/s2/favicons?domain=invite-tracker.com&sz=128",
+    "invite": null,
+    "tags": ["Invitaciones", "Estadísticas", "Seguimiento"]
+  },
+  {
+    "id": "topgg",
+    "name": "Top.gg Bot",
+    "description": "Actualiza información de servidores publicados en Top.gg.",
+    "category": "Utilidades",
+    "website": "https://top.gg/",
+    "logo": "https://www.google.com/s2/favicons?domain=top.gg&sz=128",
+    "invite": null,
+    "tags": ["Utilidad", "Directorios", "Comunidad"]
+  },
+
+  {
+    "id": "welcomer",
+    "name": "Welcomer",
+    "description": "Mensajes y herramientas de bienvenida para nuevos miembros.",
+    "category": "Bienvenidas",
+    "website": "https://welcomer.gg/",
+    "logo": "https://www.google.com/s2/favicons?domain=welcomer.gg&sz=128",
+    "invite": null,
+    "tags": ["Bienvenidas", "Mensajes", "Imágenes"]
+  },
+  {
+    "id": "koya",
+    "name": "Koya",
+    "description": "Herramientas de bienvenida y administración comunitaria.",
+    "category": "Bienvenidas",
+    "website": "https://koya.gg/",
+    "logo": "https://www.google.com/s2/favicons?domain=koya.gg&sz=128",
+    "invite": "https://discord.com/oauth2/authorize?client_id=276060004262477825&permissions=1644971945207&redirect_uri=https%3A%2F%2Fkoya.gg%2Fcallback&response_type=code&scope=bot+applications.commands",
+    "tags": ["Bienvenidas", "Comunidad", "Roles"]
+  },
+  {
+    "id": "ayana",
+    "name": "Ayana",
+    "description": "Bot multifunción con herramientas para comunidades.",
+    "category": "Bienvenidas",
+    "website": "https://ayana.io/",
+    "logo": "https://www.google.com/s2/favicons?domain=ayana.io&sz=128",
+    "invite": null,
+    "tags": ["Comunidad", "Bienvenidas", "Utilidad"]
+  },
+  {
+    "id": "sapphire",
+    "name": "Sapphire",
+    "description": "Moderación, registros y mensajes de bienvenida.",
+    "category": "Bienvenidas",
+    "website": "https://sapph.xyz/",
+    "logo": "https://www.google.com/s2/favicons?domain=sapph.xyz&sz=128",
+    "invite": null,
+    "tags": ["Bienvenidas", "Moderación", "Automatización"]
+  },
+  {
+    "id": "mimu",
+    "name": "Mimu",
+    "description": "Herramientas de personalización y participación comunitaria.",
+    "category": "Bienvenidas",
+    "website": "https://mimu.bot/",
+    "logo": "https://www.google.com/s2/favicons?domain=mimu.bot&sz=128",
+    "invite": "https://discord.com/oauth2/authorize?client_id=493716749342998541&permissions=1007021169&scope=bot+applications.commands",
+    "tags": ["Comunidad", "Personalización", "Mensajes"]
+  },
+
+  {
+    "id": "midjourney",
+    "name": "Midjourney Bot",
+    "description": "Generación de imágenes mediante inteligencia artificial.",
+    "category": "Inteligencia artificial",
+    "website": "https://docs.midjourney.com/",
+    "logo": "https://www.google.com/s2/favicons?domain=midjourney.com&sz=128",
+    "invite": "https://discord.com/oauth2/authorize?client_id=936929561302675456",
+    "tags": ["IA", "Imágenes", "Creatividad"]
+  },
+  {
+    "id": "gpt-assistant",
+    "name": "GPT Assistant",
+    "description": "Asistente de inteligencia artificial para conversaciones.",
+    "category": "Inteligencia artificial",
+    "website": "https://gptassistant.app/",
+    "logo": "https://www.google.com/s2/favicons?domain=gptassistant.app&sz=128",
+    "invite": null,
+    "tags": ["IA", "Chat", "Asistente"]
+  },
+  {
+    "id": "chatbot",
+    "name": "ChatBot",
+    "description": "Bot conversacional con inteligencia artificial.",
+    "category": "Inteligencia artificial",
+    "website": "https://top.gg/bot/811574181451661353",
+    "logo": "https://www.google.com/s2/favicons?domain=top.gg&sz=128",
+    "invite": null,
+    "tags": ["IA", "Chat", "Conversación"]
+  },
+  {
+    "id": "pipbot",
+    "name": "PipBot",
+    "description": "Asistente de IA con respuestas, búsqueda e imágenes.",
+    "category": "Inteligencia artificial",
+    "website": "https://pipbot.app/",
+    "logo": "https://www.google.com/s2/favicons?domain=pipbot.app&sz=128",
+    "invite": "https://discord.com/oauth2/authorize?client_id=1458029398971256896",
+    "tags": ["IA", "Asistente", "Imágenes"]
+  },
+  {
+    "id": "ai-bot",
+    "name": "ai.bot",
+    "description": "Asistente de IA para consultar documentos y responder preguntas.",
+    "category": "Inteligencia artificial",
+    "website": "https://aidiscord.bot/",
+    "logo": "https://www.google.com/s2/favicons?domain=aidiscord.bot&sz=128",
+    "invite": null,
+    "tags": ["IA", "Documentos", "Asistente"]
   }
 ]
