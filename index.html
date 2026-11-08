@@ -1,0 +1,618 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090e19">
+<title>BotList — Discord Bot Directory</title>
+
+<style>
+:root {
+  --bg:#090e19;
+  --panel:#111c2d;
+  --panel2:#17243a;
+  --blue:#2878ed;
+  --red:#e3324b;
+  --text:#f4f7fc;
+  --muted:#96a7c0;
+  --border:#263750;
+}
+
+*{box-sizing:border-box}
+
+body {
+  margin:0;
+  background:
+    radial-gradient(ellipse at 15% 0%,#17345b 0%,transparent 38%),
+    radial-gradient(ellipse at 100% 10%,#401725 0%,transparent 28%),
+    var(--bg);
+  color:var(--text);
+  font-family:Arial,Helvetica,sans-serif;
+  min-height:100vh;
+}
+
+a{text-decoration:none;color:inherit}
+button,input{font:inherit}
+
+header {
+  height:72px;
+  background:#090e19dd;
+  border-bottom:1px solid #ffffff12;
+  position:sticky;
+  top:0;
+  z-index:10;
+  backdrop-filter:blur(15px);
+}
+
+.nav {
+  max-width:1150px;
+  height:100%;
+  margin:auto;
+  padding:0 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.brand {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:22px;
+  font-weight:900;
+}
+
+.logo {
+  width:40px;
+  height:40px;
+  border-radius:12px;
+  display:grid;
+  place-items:center;
+  background:linear-gradient(135deg,var(--blue),var(--red));
+}
+
+.logo svg{width:25px}
+
+.nav-links {
+  display:flex;
+  gap:24px;
+  color:var(--muted);
+  font-size:13px;
+}
+
+.nav-links a:hover{color:white}
+
+.hero {
+  max-width:850px;
+  margin:auto;
+  padding:80px 20px 45px;
+  text-align:center;
+}
+
+.eyebrow {
+  display:inline-block;
+  background:#152b49;
+  color:#a9cbff;
+  border:1px solid #31527e;
+  padding:8px 13px;
+  border-radius:30px;
+  font-size:11px;
+  font-weight:bold;
+  letter-spacing:1px;
+}
+
+h1 {
+  font-size:clamp(40px,7vw,68px);
+  line-height:1.05;
+  letter-spacing:-3px;
+  margin:24px 0 15px;
+}
+
+.gradient {
+  background:linear-gradient(100deg,#65a9ff,#f04b63);
+  color:transparent;
+  background-clip:text;
+}
+
+.subtitle {
+  color:var(--muted);
+  line-height:1.7;
+  max-width:600px;
+  margin:0 auto 30px;
+  font-size:15px;
+}
+
+.search {
+  max-width:680px;
+  margin:auto;
+  padding:8px;
+  display:flex;
+  gap:10px;
+  background:var(--panel);
+  border:1px solid #304663;
+  border-radius:14px;
+  box-shadow:0 15px 45px #0005;
+}
+
+.search input {
+  flex:1;
+  min-width:0;
+  padding:12px;
+  background:transparent;
+  color:white;
+  border:0;
+  outline:0;
+  font-size:14px;
+}
+
+.search button {
+  background:var(--blue);
+  color:white;
+  border:0;
+  border-radius:9px;
+  padding:0 18px;
+  font-weight:bold;
+}
+
+.stats {
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  margin-top:30px;
+}
+
+.stat strong {
+  display:block;
+  font-size:21px;
+}
+
+.stat small {
+  color:var(--muted);
+  font-size:10px;
+}
+
+main {
+  max-width:1150px;
+  margin:auto;
+  padding:30px 20px 70px;
+}
+
+.section-title {
+  font-size:23px;
+  margin:0 0 5px;
+}
+
+.section-description {
+  color:var(--muted);
+  font-size:13px;
+}
+
+.categories {
+  display:flex;
+  gap:9px;
+  overflow-x:auto;
+  padding:18px 0;
+}
+
+.category {
+  flex-shrink:0;
+  border:1px solid var(--border);
+  background:var(--panel);
+  color:#b8c5d9;
+  padding:10px 15px;
+  border-radius:30px;
+  cursor:pointer;
+  font-size:12px;
+  font-weight:bold;
+}
+
+.category.active,
+.category:hover {
+  background:#1b3d6b;
+  border-color:var(--blue);
+  color:white;
+}
+
+.toolbar {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin:10px 0 18px;
+  gap:10px;
+}
+
+.result-count {
+  color:var(--muted);
+  font-size:12px;
+}
+
+.bot-grid {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:16px;
+}
+
+.bot-card {
+  background:linear-gradient(145deg,#142137,#101827);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:18px;
+  transition:.2s;
+}
+
+.bot-card:hover {
+  transform:translateY(-4px);
+  border-color:#4285da;
+  box-shadow:0 12px 35px #0005;
+}
+
+.bot-header {
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.bot-avatar {
+  width:49px;
+  height:49px;
+  border-radius:14px;
+  background:linear-gradient(135deg,#286dc0,#bd2947);
+  display:grid;
+  place-items:center;
+  font-weight:900;
+  font-size:19px;
+  flex-shrink:0;
+}
+
+.bot-name {
+  font-size:16px;
+  font-weight:bold;
+}
+
+.bot-category {
+  color:#81b5ff;
+  font-size:11px;
+  margin-top:5px;
+}
+
+.bot-description {
+  color:#a7b5c9;
+  font-size:12px;
+  line-height:1.6;
+  min-height:58px;
+  margin:17px 0;
+}
+
+.tags {
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  margin-bottom:16px;
+}
+
+.tag {
+  background:#1d2b40;
+  color:#b8c8df;
+  border-radius:6px;
+  padding:5px 8px;
+  font-size:10px;
+}
+
+.bot-actions {
+  display:flex;
+  gap:8px;
+}
+
+.bot-actions a {
+  flex:1;
+  text-align:center;
+  padding:11px 5px;
+  border-radius:9px;
+  background:var(--blue);
+  font-size:11px;
+  font-weight:bold;
+}
+
+.bot-actions a.secondary {
+  background:#26364d;
+}
+
+.empty {
+  grid-column:1/-1;
+  padding:60px 15px;
+  text-align:center;
+  border:1px dashed #344b69;
+  border-radius:15px;
+  color:var(--muted);
+}
+
+.empty h3{color:white}
+
+footer {
+  border-top:1px solid #ffffff15;
+  padding:25px 20px;
+  color:var(--muted);
+  text-align:center;
+  font-size:12px;
+}
+
+@media(max-width:850px){
+  .bot-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+@media(max-width:550px){
+  .bot-grid{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .hero{padding-top:60px}
+  h1{letter-spacing:-2px}
+  .stats{gap:20px}
+  .search button{padding:0 12px;font-size:12px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <a href="#" class="brand">
+      <span class="logo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+          <rect x="3" y="7" width="18" height="13" rx="4"/>
+          <path d="M8 7 6 4m10 3 2-3"/>
+          <circle cx="9" cy="13" r="1"/>
+          <circle cx="15" cy="13" r="1"/>
+        </svg>
+      </span>
+      BotList
+    </a>
+
+    <nav class="nav-links">
+      <a href="#">Inicio</a>
+      <a href="#explorar">Explorar</a>
+      <a href="#categorias">Categorías</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+
+  <span class="eyebrow">● DISCORD BOT DIRECTORY</span>
+
+  <h1>
+    Encuentra tu próximo<br>
+    <span class="gradient">bot favorito.</span>
+  </h1>
+
+  <p class="subtitle">
+    Descubre cientos de bots de Discord.
+    Explora herramientas, encuentra funcionalidades
+    y mejora tu servidor.
+  </p>
+
+  <div class="search">
+    <input
+      id="searchInput"
+      type="search"
+      placeholder="Buscar Nekotina, MEE6, Dyno..."
+      autocomplete="off"
+    >
+    <button onclick="clearSearch()">Limpiar</button>
+  </div>
+
+  <div class="stats">
+    <div class="stat">
+      <strong id="totalBots">0</strong>
+      <small>BOTS</small>
+    </div>
+
+    <div class="stat">
+      <strong>12+</strong>
+      <small>CATEGORÍAS</small>
+    </div>
+
+    <div class="stat">
+      <strong>100%</strong>
+      <small>GRATUITO</small>
+    </div>
+  </div>
+
+</section>
+
+<main id="explorar">
+
+  <h2 class="section-title">Explorar bots</h2>
+  <p class="section-description">
+    Encuentra el bot perfecto para tu comunidad.
+  </p>
+
+  <div class="categories" id="categorias">
+    <button class="category active" data-category="Todos">Todos</button>
+  </div>
+
+  <div class="toolbar">
+    <strong>Directorio</strong>
+    <span class="result-count" id="resultCount">Cargando...</span>
+  </div>
+
+  <section class="bot-grid" id="botGrid">
+    <div class="empty">Cargando catálogo...</div>
+  </section>
+
+</main>
+
+<footer>
+  <strong>BotList</strong>
+  <p>Directorio independiente de bots de Discord.</p>
+  <p>No afiliado oficialmente con Discord.</p>
+</footer>
+
+<script>
+let bots = [];
+let activeCategory = "Todos";
+
+const grid = document.getElementById("botGrid");
+const search = document.getElementById("searchInput");
+const categories = document.getElementById("categorias");
+
+function escapeHTML(value) {
+  return String(value ?? "").replace(/[&<>"']/g, char => ({
+    "&":"&amp;",
+    "<":"&lt;",
+    ">":"&gt;",
+    '"':"&quot;",
+    "'":"&#39;"
+  })[char]);
+}
+
+function initials(name) {
+  return name.split(/\s+/).map(x => x[0]).join("").slice(0,2);
+}
+
+async function loadBots() {
+  try {
+    const response = await fetch("./bots.json");
+
+    if (!response.ok) {
+      throw new Error("No se pudo cargar bots.json");
+    }
+
+    bots = await response.json();
+
+    document.getElementById("totalBots").textContent = bots.length;
+
+    renderCategories();
+    renderBots();
+
+  } catch(error) {
+    grid.innerHTML = `
+      <div class="empty">
+        <h3>No se pudo cargar el catálogo</h3>
+        Comprueba que bots.json esté junto a index.html.
+      </div>
+    `;
+  }
+}
+
+function renderCategories() {
+  const list = [
+    "Todos",
+    ...new Set(bots.map(bot => bot.category))
+  ];
+
+  categories.innerHTML = list.map(category => `
+    <button
+      class="category ${category === activeCategory ? "active" : ""}"
+      data-category="${escapeHTML(category)}"
+    >
+      ${escapeHTML(category)}
+    </button>
+  `).join("");
+
+  categories.querySelectorAll("button").forEach(button => {
+    button.addEventListener("click", () => {
+      activeCategory = button.dataset.category;
+      renderCategories();
+      renderBots();
+    });
+  });
+}
+
+function renderBots() {
+  const query = search.value.toLowerCase().trim();
+
+  const filtered = bots.filter(bot => {
+    const content = [
+      bot.name,
+      bot.description,
+      bot.category,
+      ...(bot.tags || [])
+    ].join(" ").toLowerCase();
+
+    return (
+      (activeCategory === "Todos" ||
+       bot.category === activeCategory) &&
+      content.includes(query)
+    );
+  });
+
+  document.getElementById("resultCount").textContent =
+    `${filtered.length} resultados`;
+
+  if (!filtered.length) {
+    grid.innerHTML = `
+      <div class="empty">
+        <h3>No encontramos bots</h3>
+        Intenta buscar otro nombre o categoría.
+      </div>
+    `;
+    return;
+  }
+
+  grid.innerHTML = filtered.map(bot => `
+    <article class="bot-card">
+
+      <div class="bot-header">
+        <div class="bot-avatar">
+          ${escapeHTML(initials(bot.name))}
+        </div>
+
+        <div>
+          <div class="bot-name">
+            ${escapeHTML(bot.name)}
+          </div>
+
+          <div class="bot-category">
+            ${escapeHTML(bot.category)}
+          </div>
+        </div>
+      </div>
+
+      <p class="bot-description">
+        ${escapeHTML(bot.description)}
+      </p>
+
+      <div class="tags">
+        ${(bot.tags || []).map(tag => `
+          <span class="tag">${escapeHTML(tag)}</span>
+        `).join("")}
+      </div>
+
+      <div class="bot-actions">
+        <a
+          href="${escapeHTML(bot.website)}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Sitio oficial ↗
+        </a>
+
+        <a
+          class="secondary"
+          href="${escapeHTML(bot.website)}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ver bot
+        </a>
+      </div>
+
+    </article>
+  `).join("");
+}
+
+search.addEventListener("input", renderBots);
+
+function clearSearch() {
+  search.value = "";
+  activeCategory = "Todos";
+  renderCategories();
+  renderBots();
+}
+
+loadBots();
+</script>
+
+</body>
+</html>
