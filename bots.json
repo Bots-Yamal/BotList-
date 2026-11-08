@@ -1,0 +1,99 @@
+
+[
+  {
+    "id": "dyno",
+    "name": "Dyno",
+    "description": "Herramientas de moderación, automatización y administración para servidores.",
+    "category": "Moderación",
+    "website": "https://dyno.gg/",
+    "tags": ["moderación", "logs", "automación"]
+  },
+  {
+    "id": "mee6",
+    "name": "MEE6",
+    "description": "Bot multifunción con herramientas de moderación, niveles y automatizaciones.",
+    "category": "Multifunción",
+    "website": "https://mee6.xyz/",
+    "tags": ["niveles", "moderación", "multifunción"]
+  },
+  {
+    "id": "carl-bot",
+    "name": "Carl-bot",
+    "description": "Roles de reacción, moderación, registros y automatizaciones.",
+    "category": "Moderación",
+    "website": "https://carl.gg/",
+    "tags": ["roles", "moderación", "logs"]
+  },
+  {
+    "id": "probot",
+    "name": "ProBot",
+    "description": "Bienvenidas, moderación, niveles y herramientas para comunidades.",
+    "category": "Multifunción",
+    "website": "https://probot.io/",
+    "tags": ["bienvenidas", "niveles", "moderación"]
+  },
+  {
+    "id": "yagpdb",
+    "name": "YAGPDB",
+    "description": "Herramientas configurables de moderación, roles y automatización.",
+    "category": "Automatización",
+    "website": "https://yagpdb.xyz/",
+    "tags": ["automatización", "roles", "moderación"]
+  },
+  {
+    "id": "ticket-tool",
+    "name": "Ticket Tool",
+    "description": "Sistema de tickets de soporte para servidores de Discord.",
+    "category": "Tickets",
+    "website": "https://ticket-tool.xyz/",
+    "tags": ["tickets", "soporte"]
+  },
+  {
+    "id": "arcane",
+    "name": "Arcane",
+    "description": "Sistema de niveles y herramientas de comunidad.",
+    "category": "Niveles",
+    "website": "https://arcane.bot/",
+    "tags": ["niveles", "comunidad"]
+  },
+  {
+    "id": "sapphire",
+    "name": "Sapphire",
+    "description": "Bot con herramientas de administración, moderación y personalización.",
+    "category": "Multifunción",
+    "website": "https://sapph.xyz/",
+    "tags": ["moderación", "utilidades"]
+  },
+  {
+    "id": "nekotina",
+    "name": "Nekotina",
+    "description": "Bot multifunción para comunidades de Discord.",
+    "category": "Multifunción",
+    "website": "https://nekotina.com/",
+    "tags": ["multifunción", "comunidad"]
+  },
+  {
+    "id": "jockie-music",
+    "name": "Jockie Music",
+    "description": "Bot de música para escuchar contenido en canales de voz.",
+    "category": "Música",
+    "website": "https://www.jockiemusic.com/",
+    "tags": ["música", "voz"]
+  },
+  {
+    "id": "fredboat",
+    "name": "FredBoat",
+    "description": "Bot de música con reproducción y controles para servidores.",
+    "category": "Música",
+    "website": "https://fredboat.com/",
+    "tags": ["música", "voz"]
+  },
+  {
+    "id": "dank-memer",
+    "name": "Dank Memer",
+    "description": "Bot de entretenimiento con juegos, economía y funciones sociales.",
+    "category": "Diversión",
+    "website": "https://dankmemer.lol/",
+    "tags": ["economía", "juegos", "diversión"]
+  }
+]
